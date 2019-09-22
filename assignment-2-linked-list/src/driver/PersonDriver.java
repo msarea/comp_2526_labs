@@ -20,9 +20,8 @@ public class PersonDriver {
 			
 			System.out.print("Exit? enter -1 for yes: ");
 			String inputBreaker = scan.next();
-			System.out.println(inputBreaker);
 
-			if(inputBreaker.equals("-1")) {
+			if (inputBreaker.equals("-1")) {
 				break;
 			}
 		}

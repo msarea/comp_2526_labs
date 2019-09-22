@@ -19,8 +19,8 @@ public abstract class Person {
 	 * 		the age of the person
 	 */
 	public Person(String name, int age) {
-		this.age = age;
-		this.name = name;
+		setAge(age);
+		setName(name);
 	}
 	
 	/**
@@ -43,7 +43,6 @@ public abstract class Person {
 			this.age = age;
 		}
 	}
-
 	
 	private String formatName(String name) {
 		if (name != null && !name.trim().isEmpty()) {
@@ -51,7 +50,6 @@ public abstract class Person {
 		}
 		return name;
 	}
-	
 
 	public int getAge() {
 		return this.age;
