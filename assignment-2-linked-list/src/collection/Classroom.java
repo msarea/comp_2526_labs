@@ -41,8 +41,6 @@ public class Classroom {
 			System.out.println(endOfList.toString());
 			endOfList = endOfList.previous;
 		}
-		if (endOfList.previous == null) {
-			System.out.println(endOfList.toString());
-		}
+		System.out.println(endOfList.toString());
 	}
 }

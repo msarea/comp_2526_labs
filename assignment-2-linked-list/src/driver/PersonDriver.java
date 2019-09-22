@@ -13,17 +13,13 @@ public class PersonDriver {
 		while (true){
 			System.out.print("Name: ");
 			String name = scan.next();
+			if (name.equals("-1")) {
+				break;
+			}
 			
 			int age = validateAgeInput(scan);
 
 			list = list.addStudent(name, age);
-			
-			System.out.print("Exit? enter -1 for yes: ");
-			String inputBreaker = scan.next();
-
-			if (inputBreaker.equals("-1")) {
-				break;
-			}
 		}
 		list.printStudentList();
 	}
