@@ -1,6 +1,6 @@
-package src.collection;
+package collection;
 
-import src.data.Student;
+import data.Student;
 
 public class Classroom {
 	Student tail;

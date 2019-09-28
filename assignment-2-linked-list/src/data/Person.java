@@ -1,4 +1,4 @@
-package src.data;
+package data;
 
 public abstract class Person {
 	private int age;

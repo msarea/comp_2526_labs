@@ -1,8 +1,8 @@
-package src.driver;
+package driver;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import src.collection.*;
+import collection.*;
 
 public class PersonDriver {
 	
