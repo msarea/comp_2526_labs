@@ -69,31 +69,29 @@ public class LinkedList {
         }
     }
 
-    // /** 
-    //  * 
-    //  */
-    // public void sortList() {
-    //     Node currNode = this.head;
-    //     while(currNode != null) {
-    //         Node nextNode = currNode.getNext();
-    //         while(nextNode != null) {
-    //             if(currNode.getData() > nextNode.getData()) {
-    //                 // 5 -> 4 // 4 
-    //                 currNode.setNext(nextNode.getNext()); // 5 -> 1
-    //                 nextNode.setNext(currNode); // 4 -> 5
-    //                 this.head = nextNode; // head = 4
-    //                 nextNode = currNode.getNext();
-    //                 continue;
-    //             }
-    //            if(this.head.getData() > nextNode.getData()) {
-    //                 this.head.setNext(nextNode);
-    //                 this.head = nextNode;
-    //             }
-    //         }
-    //         // System.out.println(currNode.getData());
-    //         currNode = nextNode;
-    //     }
-    // }
+    /** 
+     * Bubble sort the list
+     */
+    public void sortList() {
+        boolean swapped;
+        do {
+            Node currNode = this.head;
+            swapped = false;
+            while(currNode != null) {
+                Node nextNode = currNode.getNext();
+                if (nextNode != null){
+                    int tempData = currNode.getData();
+                    if (tempData > nextNode.getData()) {
+                        swapped = true;
+                        currNode.setData(nextNode.getData());
+                        nextNode.setData(tempData);
+                    }
+                }
+                currNode = nextNode;
+            }
+        } while(swapped);
+    }
+
     /**
      * get length of linkedList
      * @return int length of list
